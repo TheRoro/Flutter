@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../Interlab/Interlab-Flutter/lib/pages/login.dart';
+import 'package:interlab_login/pages/login.dart';
 
 void main() {
   runApp(MyApp());
