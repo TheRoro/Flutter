@@ -79,8 +79,8 @@ class Source {
     required this.name,
   });
 
-  Id id;
-  Name name;
+  Id? id;
+  Name? name;
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
         id: idValues.map[json["id"]],
@@ -105,7 +105,7 @@ final nameValues =
 
 class EnumValues<T> {
   Map<String, T> map;
-  Map<T, String> reverseMap;
+  late Map<T, String> reverseMap;
 
   EnumValues(this.map);
 
