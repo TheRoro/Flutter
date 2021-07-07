@@ -18,7 +18,6 @@ class MovieService {
           favorite: false,
           imageUrl: movieResults[i]['poster_path'],
           popularity: movieResults[i]['popularity']);
-      // print(mov.originalLanguage);
       movieList.add(mov);
     }
     return movieList;

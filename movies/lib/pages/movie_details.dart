@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies/db/dbmovie_database.dart';
 import 'package:movies/models/Movie.dart';
 
 class MovieDetails extends StatefulWidget {
@@ -27,9 +28,10 @@ class _MovieDetailsState extends State<MovieDetails> {
                 child: IconButton(
               icon: new Icon(Icons.favorite, color: getColor(widget.movie)),
               onPressed: () {
-                print('updating value');
+                print('updating local value on details');
                 setState(() {
                   widget.movie.favorite = !widget.movie.favorite;
+                  Navigator.pop(context, widget.movie.favorite);
                 });
               },
             )),
