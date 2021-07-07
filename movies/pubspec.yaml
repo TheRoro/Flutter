@@ -22,6 +22,8 @@ environment:
 
 dependencies:
   http: ^0.13.3
+  moor_flutter: ^4.0.0
+  provider: ^5.0.0
   flutter:
     sdk: flutter
 
@@ -33,6 +35,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  moor_generator: ^4.3.2
+  build_runner:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
