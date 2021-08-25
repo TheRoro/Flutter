@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:dashboard/constants/controllers.dart';
 import 'package:dashboard/helpers/responsiveness.dart';
 import 'package:dashboard/pages/drivers/widgets/drivers_table.dart';
 import 'package:dashboard/widgets/custom_text.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class DriversPage extends StatelessWidget {
   const DriversPage({Key? key}) : super(key: key);

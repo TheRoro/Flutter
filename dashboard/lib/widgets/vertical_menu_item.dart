@@ -13,7 +13,6 @@ class VerticalMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () {
         onTap();
@@ -33,41 +32,44 @@ class VerticalMenuItem extends StatelessWidget {
               Visibility(
                 visible: menuController.isHovering(itemName) ||
                     menuController.isActive(itemName),
+                maintainSize: true,
+                maintainAnimation: true,
+                maintainState: true,
                 child: Container(
                   width: 3,
                   height: 72,
-                  color: dark,
+                  color: Colors.white,
                 ),
-                maintainSize: true,
-                maintainState: true,
-                maintainAnimation: true,
               ),
               Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(16),
-                      child: menuController.returnIconFor(itemName),
-                    ),
-                    if (!menuController.isActive(itemName))
-                      Flexible(
-                        child: CustomText(
+                child: Container(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: menuController.returnIconFor(itemName),
+                      ),
+                      if (!menuController.isActive(itemName))
+                        Flexible(
+                          child: CustomText(
                             text: itemName,
                             color: menuController.isHovering(itemName)
-                                ? dark
-                                : lightGrey),
-                      )
-                    else
-                      Flexible(
-                        child: CustomText(
-                          text: itemName,
-                          color: dark,
-                          size: 18,
-                          weight: FontWeight.bold,
+                                ? Colors.white
+                                : lightGrey,
+                          ),
+                        )
+                      else
+                        Flexible(
+                          child: CustomText(
+                            text: itemName,
+                            color: Colors.white,
+                            size: 18,
+                            weight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
