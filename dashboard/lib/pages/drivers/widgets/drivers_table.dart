@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:dashboard/constants/style.dart';
 import 'package:dashboard/widgets/custom_text.dart';
 import 'package:data_table_2/data_table_2.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class DriversTable extends StatelessWidget {
   @override
@@ -31,7 +31,7 @@ class DriversTable extends StatelessWidget {
         minWidth: 600,
         columns: [
           DataColumn2(
-            label: Text("Name"),
+            label: Text('Name'),
             size: ColumnSize.L,
           ),
           DataColumn(
@@ -49,10 +49,10 @@ class DriversTable extends StatelessWidget {
           (index) => DataRow(
             cells: [
               DataCell(
-                CustomText(text: "Rodrigo Ramirez"),
+                CustomText(text: 'Rodrigo Ramirez'),
               ),
               DataCell(
-                CustomText(text: "London"),
+                CustomText(text: 'London'),
               ),
               DataCell(
                 Row(
@@ -67,7 +67,7 @@ class DriversTable extends StatelessWidget {
                       width: 5,
                     ),
                     CustomText(
-                      text: "4.5",
+                      text: '4.5',
                     )
                   ],
                 ),
@@ -81,7 +81,7 @@ class DriversTable extends StatelessWidget {
                   ),
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   child: CustomText(
-                    text: "Block",
+                    text: 'Block',
                     color: active.withOpacity(.7),
                     weight: FontWeight.bold,
                   ),

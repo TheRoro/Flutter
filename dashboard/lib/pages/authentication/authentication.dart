@@ -21,7 +21,7 @@ class AuthenticationPage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(right: 12),
-                    child: Image.asset("assets/icons/logo.png"),
+                    child: Image.asset('assets/icons/logo.png'),
                   ),
                   Expanded(child: Container()),
                 ],
@@ -31,7 +31,7 @@ class AuthenticationPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text("Login",
+                  Text('Login',
                       style: GoogleFonts.roboto(
                           fontSize: 30, fontWeight: FontWeight.bold)),
                 ],
@@ -42,7 +42,7 @@ class AuthenticationPage extends StatelessWidget {
               Row(
                 children: [
                   CustomText(
-                    text: "Welcome back to the admin panel.",
+                    text: 'Welcome back to the admin panel.',
                     color: lightGrey,
                   ),
                 ],
@@ -52,8 +52,8 @@ class AuthenticationPage extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
-                    labelText: "Email",
-                    hintText: "abc@domain.com",
+                    labelText: 'Email',
+                    hintText: 'abc@domain.com',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20))),
               ),
@@ -63,8 +63,8 @@ class AuthenticationPage extends StatelessWidget {
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                    labelText: "Password",
-                    hintText: "123",
+                    labelText: 'Password',
+                    hintText: '123',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20))),
               ),
@@ -78,11 +78,11 @@ class AuthenticationPage extends StatelessWidget {
                     children: [
                       Checkbox(value: true, onChanged: (value) {}),
                       CustomText(
-                        text: "Remeber Me",
+                        text: 'Remeber Me',
                       ),
                     ],
                   ),
-                  CustomText(text: "Forgot password?", color: active)
+                  CustomText(text: 'Forgot password?', color: active)
                 ],
               ),
               SizedBox(
@@ -99,7 +99,7 @@ class AuthenticationPage extends StatelessWidget {
                   width: double.maxFinite,
                   padding: EdgeInsets.symmetric(vertical: 16),
                   child: CustomText(
-                    text: "Login",
+                    text: 'Login',
                     color: Colors.white,
                   ),
                 ),
@@ -109,9 +109,9 @@ class AuthenticationPage extends StatelessWidget {
               ),
               RichText(
                   text: TextSpan(children: [
-                TextSpan(text: "Do not have admin credentials? "),
+                TextSpan(text: 'Do not have admin credentials? '),
                 TextSpan(
-                    text: "Request Credentials! ",
+                    text: 'Request Credentials! ',
                     style: TextStyle(color: active))
               ]))
             ],

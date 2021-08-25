@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:dashboard/constants/controllers.dart';
 import 'package:dashboard/constants/style.dart';
 import 'package:dashboard/widgets/custom_text.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HorizontalMenuItem extends StatelessWidget {
   final String itemName;
@@ -33,29 +33,27 @@ class HorizontalMenuItem extends StatelessWidget {
               Visibility(
                 visible: menuController.isHovering(itemName) ||
                     menuController.isActive(itemName),
+                maintainSize: true,
+                maintainAnimation: true,
+                maintainState: true,
                 child: Container(
                   width: 6,
                   height: 40,
                   color: dark,
                 ),
-                maintainSize: true,
-                maintainState: true,
-                maintainAnimation: true,
               ),
-              SizedBox(
-                width: _width / 80,
-              ),
+              SizedBox(width: _width / 88),
               Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: menuController.returnIconFor(itemName),
               ),
               if (!menuController.isActive(itemName))
                 Flexible(
                   child: CustomText(
-                      text: itemName,
-                      color: menuController.isHovering(itemName)
-                          ? dark
-                          : lightGrey),
+                    text: itemName,
+                    color:
+                        menuController.isHovering(itemName) ? dark : lightGrey,
+                  ),
                 )
               else
                 Flexible(

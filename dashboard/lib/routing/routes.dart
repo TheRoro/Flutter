@@ -1,16 +1,16 @@
-const rootRoute = "/";
+const rootRoute = '/';
 
-const overviewPageDisplayName = "Overview";
-const overviewPageRoute = "/overview";
+const overviewPageDisplayName = 'Overview';
+const overviewPageRoute = '/overview';
 
-const driversPageDisplayName = "Drivers";
-const driversPageRoute = "/drivers";
+const driversPageDisplayName = 'Drivers';
+const driversPageRoute = '/drivers';
 
-const clientsPageDisplayName = "Clients";
-const clientsPageRoute = "/clients";
+const clientsPageDisplayName = 'Clients';
+const clientsPageRoute = '/clients';
 
-const authenticationPageDisplayName = "Log out";
-const authenticationPageRoute = "/auth";
+const authenticationPageDisplayName = 'Log out';
+const authenticationPageRoute = '/auth';
 
 class MenuItem {
   final String name;

@@ -1,11 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:dashboard/constants/controllers.dart';
 import 'package:dashboard/constants/style.dart';
 import 'package:dashboard/helpers/responsiveness.dart';
 import 'package:dashboard/routing/routes.dart';
 import 'package:dashboard/widgets/custom_text.dart';
 import 'package:dashboard/widgets/side_menu_item.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
@@ -30,11 +30,11 @@ class SideMenu extends StatelessWidget {
                     SizedBox(width: _width / 48),
                     Padding(
                       padding: const EdgeInsets.only(right: 12),
-                      child: Image.asset("assets/icons/logo.png"),
+                      child: Image.asset('assets/icons/logo.png'),
                     ),
                     Flexible(
                       child: CustomText(
-                        text: "Dash",
+                        text: 'Dash',
                         size: 20,
                         weight: FontWeight.bold,
                         color: active,
@@ -54,7 +54,8 @@ class SideMenu extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: sideMenuItemRoutes
-                .map((item) => SideMenuItem(
+                .map(
+                  (item) => SideMenuItem(
                     itemName: item.name,
                     onTap: () {
                       if (item.route == authenticationPageRoute) {
@@ -67,9 +68,11 @@ class SideMenu extends StatelessWidget {
                         if (ResponsiveWidget.isSmallScreen(context)) Get.back();
                         navigationController.navigateTo(item.route);
                       }
-                    }))
+                    },
+                  ),
+                )
                 .toList(),
-          )
+          ),
         ],
       ),
     );
